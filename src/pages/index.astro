@@ -11,7 +11,11 @@ import posts from '../data/posts.json';
     <h1>Blog de Entrevistas</h1>
     <ul>
       {posts.map(post => (
-        <li><strong>{post.titulo}</strong> - {post.autor}</li>
+        <li>
+          <a href={`/posts/${post.slug}`}>
+            <strong>{post.titulo}</strong>: {post.descripcion}
+          </a>
+        </li>
       ))}
     </ul>
   </body>
