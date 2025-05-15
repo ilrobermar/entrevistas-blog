@@ -1,14 +1,20 @@
 [
   {
     "titulo": "Cómo conseguir trabajo remoto en 2025",
-    "autor": "Lucía Gómez"
+    "autor": "Lucía Gómez",
+    "slug": "trabajo-remoto-2025",
+    "descripcion": "Descubre cómo acceder al mercado global de empleo remoto.",
+    "contenido": "En este artículo aprenderás estrategias para conseguir trabajo remoto, qué plataformas utilizar y cómo preparar tu perfil profesional.",
+    "fecha": "2025-05-15",
+    "imagen": "https://via.placeholder.com/600x300"
   },
   {
     "titulo": "Entrevista con un reclutador de Google",
-    "autor": "Carlos Rodríguez"
-  },
-  {
-    "titulo": "Las 5 preguntas más comunes en entrevistas de RRHH",
-    "autor": "Ana Pérez"
+    "autor": "Carlos Rodríguez",
+    "slug": "entrevista-google",
+    "descripcion": "Conoce cómo es el proceso de selección en Google contado por un insider.",
+    "contenido": "Carlos Rodríguez, con más de 5 años reclutando talento para Google, nos comparte los secretos para destacar en las entrevistas.",
+    "fecha": "2025-05-10",
+    "imagen": "https://via.placeholder.com/600x300"
   }
 ]
