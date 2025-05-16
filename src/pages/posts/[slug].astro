@@ -10,3 +10,19 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 ---
+
+<html>
+  <head>
+    <title>{post.titulo}</title>
+  </head>
+  <body>
+    <h1>{post.titulo}</h1>
+    <p><strong>Autor:</strong> {post.autor}</p>
+    <p><strong>Fecha:</strong> {post.fecha}</p>
+    <img src={post.imagen} alt={post.titulo} />
+    <p>{post.descripcion}</p>
+    <article>
+      <p>{post.contenido}</p>
+    </article>
+  </body>
+</html>
