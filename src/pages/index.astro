@@ -1,64 +1,31 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import posts from '../data/posts.json';
-import { html } from 'astro/components';
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Blog de Entrevistas</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        background: #f9f9f9;
-      }
-      h1 {
-        text-align: center;
-        color: #333;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-      .card {
-        background: white;
-        padding: 1.5rem;
+<BaseLayout title="Blog de Entrevistas - Inicio">
+  <div class="grid" style="
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap:2rem;
+  ">
+    {posts.map(post => (
+      <a href={`/posts/${post.slug}`} style="
+        display:block;
+        text-decoration:none;
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        transition: transform 0.2s ease;
-        text-decoration: none;
+        padding: 1rem;
+        background:white;
         color: inherit;
-      }
-      .card:hover {
-        transform: translateY(-5px);
-      }
-      .card img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-      .card h2 {
-        font-size: 1.2rem;
-        margin: 0.8rem 0 0.4rem;
-        color: #2c3e50;
-      }
-      .card p {
-        margin: 0.2rem 0;
-        color: #666;
-      }
-      .fecha {
-        font-size: 0.85rem;
-        color: #aaa;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Entrevistas y Consejos Profesionales</h1>
-    <div class="grid">
-      {
-        posts.map(post => html`
-          <a class="card" href="/posts/${post.slug}">
-            <img src="${post.imagen}" alt="${post.ti
+        transition: transform 0.2s ease;
+      " onMouseOver={e => e.currentTarget.style.transform = 'translateY(-5px)'}
+        onMouseOut={e => e.currentTarget.style.transform = 'none'}>
+        <img src={post.imagen} alt={post.titulo} style="width: 100%; border-radius: 8px;"/>
+        <h2 style="margin-top:0.8rem; color:#2c3e50;">{post.titulo}</h2>
+        <p style="color:#666;">{post.descripcion}</p>
+        <small style="color:#aaa;">{post.fecha}</small>
+      </a>
+    ))}
+  </div>
+</BaseLayout>
