@@ -1,14 +1,12 @@
 [
   {
-    "title": "Entrevista con Julia Gómez: creatividad sin límites",
-    "slug": "julia-gomez",
-    "description": "Conversamos con Julia sobre cómo desarrolla su proceso creativo.",
-    "content": "Julia Gómez nos comparte su experiencia en el mundo del diseño, cómo empezó y qué la inspira cada día."
+    "slug": "preguntas-entrevista-enfermera",
+    "titulo": "Preguntas frecuentes en entrevistas para enfermeras",
+    "contenido": "Contenido detallado sobre preguntas comunes en entrevistas para enfermeras."
   },
   {
-    "title": "Carlos Rivera: innovación en negocios sostenibles",
-    "slug": "carlos-rivera",
-    "description": "Carlos nos habla sobre su startup verde y su visión del futuro.",
-    "content": "Fundador de EcoFuturo, Carlos comparte el camino que lo llevó a emprender con propósito."
+    "slug": "preguntas-entrevista-desarrollador",
+    "titulo": "Preguntas clave en entrevistas para desarrolladores",
+    "contenido": "Contenido detallado sobre preguntas comunes en entrevistas para desarrolladores."
   }
 ]
