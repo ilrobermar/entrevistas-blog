@@ -1,12 +1,4 @@
 [
-  {
-    "slug": "preguntas-entrevista-enfermera",
-    "titulo": "Preguntas frecuentes en entrevistas para enfermeras",
-    "contenido": "Contenido detallado sobre preguntas comunes en entrevistas para enfermeras."
-  },
-  {
-    "slug": "preguntas-entrevista-desarrollador",
-    "titulo": "Preguntas clave en entrevistas para desarrolladores",
-    "contenido": "Contenido detallado sobre preguntas comunes en entrevistas para desarrolladores."
-  }
+  { "slug": "preguntas-entrevista-enfermera", "title": "Preguntas para entrevista de enfermera" },
+  { "slug": "preguntas-entrevista-desarrollador", "title": "Preguntas para entrevista de desarrollador" }
 ]
