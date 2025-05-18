@@ -1,14 +1,14 @@
 [
   {
-    "slug": "entrevista-juan",
-    "title": "Entrevista con Juan",
-    "date": "2025-05-17",
-    "content": "Aquí va el contenido de la entrevista con Juan."
+    "title": "Entrevista con Julia Gómez: creatividad sin límites",
+    "slug": "julia-gomez",
+    "description": "Conversamos con Julia sobre cómo desarrolla su proceso creativo.",
+    "content": "Julia Gómez nos comparte su experiencia en el mundo del diseño, cómo empezó y qué la inspira cada día."
   },
   {
-    "slug": "entrevista-maria",
-    "title": "Entrevista con María",
-    "date": "2025-05-18",
-    "content": "Aquí va el contenido de la entrevista con María."
+    "title": "Carlos Rivera: innovación en negocios sostenibles",
+    "slug": "carlos-rivera",
+    "description": "Carlos nos habla sobre su startup verde y su visión del futuro.",
+    "content": "Fundador de EcoFuturo, Carlos comparte el camino que lo llevó a emprender con propósito."
   }
 ]
