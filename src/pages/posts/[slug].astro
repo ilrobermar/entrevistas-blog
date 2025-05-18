@@ -1,7 +1,9 @@
 ---
-import posts from '../../data/posts.json';
+import { getCollection, getEntryBySlug } from 'astro:content';
+import { AstroError } from 'astro/errors';
 
 export async function getStaticPaths() {
+  const posts = await getCollection('posts');
   return posts.map(post => ({
     params: { slug: post.slug },
     props: { post }
@@ -13,12 +15,12 @@ const { post } = Astro.props;
 
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <title>{post.title}</title>
+    <title>{post.data.title}</title>
   </head>
   <body>
-    <h1>{post.title}</h1>
-    <p>{post.description}</p>
-    <article>{post.content}</article>
+    <h1>{post.data.title}</h1>
+    <article>
+      {post.body}
+    </article>
   </body>
 </html>
