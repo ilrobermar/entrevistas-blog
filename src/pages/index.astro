@@ -1,31 +1,15 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import posts from '../data/posts.json';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
 ---
 
-<BaseLayout title="Blog de Entrevistas - Inicio">
-  <div class="grid" style="
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap:2rem;
-  ">
-    {posts.map(post => (
-      <a href={`/posts/${post.slug}`} style="
-        display:block;
-        text-decoration:none;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        padding: 1rem;
-        background:white;
-        color: inherit;
-        transition: transform 0.2s ease;
-      " onMouseOver={e => e.currentTarget.style.transform = 'translateY(-5px)'}
-        onMouseOut={e => e.currentTarget.style.transform = 'none'}>
-        <img src={post.imagen} alt={post.titulo} style="width: 100%; border-radius: 8px;"/>
-        <h2 style="margin-top:0.8rem; color:#2c3e50;">{post.titulo}</h2>
-        <p style="color:#666;">{post.descripcion}</p>
-        <small style="color:#aaa;">{post.fecha}</small>
-      </a>
-    ))}
-  </div>
-</BaseLayout>
+<h1>Preguntas de Entrevista por Puesto</h1>
+
+<ul>
+  {posts.map(post => (
+    <li>
+      <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+    </li>
+  ))}
+</ul>
